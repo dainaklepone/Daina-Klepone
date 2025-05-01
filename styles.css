@@ -546,3 +546,31 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+
+
+/* Styling for the winner tagline */
+.winner-tagline {
+    background-color: var(--color-accent); /* Navy Blue */
+    color: var(--color-white);
+    padding: 0.5rem 1rem;
+    display: inline-block; /* To make the background fit the text */
+    margin-bottom: 1rem;
+    font-family: var(--font-special);
+    font-size: 1.1rem; /* Slightly smaller than original tagline */
+    letter-spacing: 1px;
+}
+
+
+
+/* Style for the winner tagline */
+.winner-tagline {
+    background-color: #001f3f; /* Navy Blue */
+    color: #ffffff; /* White */
+    padding: 10px 15px;
+    display: inline-block; /* Makes the background only cover the text */
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-radius: 4px; /* Optional: adds slightly rounded corners */
+}
