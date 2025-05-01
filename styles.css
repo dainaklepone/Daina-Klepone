@@ -580,3 +580,13 @@ footer {
     width: 120px;
     height: auto;
 }
+.author-image img {
+    width: 300px; /* or whatever size fits your design */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.author-image {
+    text-align: center;
+    margin-bottom: 2rem;
+}
