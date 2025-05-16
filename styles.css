@@ -26,7 +26,14 @@
 
 html {
     scroll-behavior: smooth;
+}.book-tagline {
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
+
+
 
 body {
     font-family: var(--font-body);
