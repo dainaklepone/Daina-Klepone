@@ -94,15 +94,22 @@
 
        
         <section class="newsletter">
-            <div class="container">
-                <h2>JOIN THE SHADOWS</h2>
-                <p>Subscribe to my newsletter </p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Your email address" required>
-                    <button type="submit" class="btn btn-accent">SUBSCRIBE</button>
-                </form>
-            </div>
-        </section>
+    <div class="container">
+        <h2>JOIN THE SHADOWS</h2>
+        <p>Subscribe to my newsletter</p>
+
+        <form id="newsletter-form" action="https://formspree.io/f/mqaqnbbo" method="POST" class="newsletter-form">
+            <input type="hidden" name="_subject" value="New Newsletter Subscription">
+            <input type="email" name="email" placeholder="Your email address" required>
+            <button type="submit" class="btn btn-accent">SUBSCRIBE</button>
+        </form>
+
+        <!-- Hidden thank-you message -->
+        <div id="thank-you" style="display: none; margin-top: 1rem; color: var(--color-accent); font-weight: bold;">
+            Thank you for your subscription! We'll meet soon!
+        </div>
+    </div>
+</section>
     </main>
 
    <footer>
@@ -127,5 +134,29 @@
 </footer>
 
     <script src="script.js"></script>
+    <script>
+  const form = document.getElementById("newsletter-form");
+  const thankYou = document.getElementById("thank-you");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = form.action;
+
+    const response = await fetch(action, {
+      method: "POST",
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      form.style.display = "none";
+      thankYou.style.display = "block";
+    }
+  });
+</script>
+
 </body>
 </html>
