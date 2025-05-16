@@ -601,4 +601,8 @@ footer {
     text-align: center;
     margin: 2rem auto;
 }
+.influences-list ul {
+    list-style-type: none;
+    padding-left: 0;
+}
 
