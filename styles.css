@@ -296,7 +296,7 @@ header {
 }
 
 .book-cover {
-    flex: 0 0 360px;
+    flex: 0 0 432px;
     position: relative;
 }
 
@@ -480,6 +480,13 @@ footer {
     .book-showcase {
         flex-direction: column;
         text-align: center;
+    }
+
+    .book-cover {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 432px;
+        margin: 0 auto;
     }
     
     .book-details h2:after {
