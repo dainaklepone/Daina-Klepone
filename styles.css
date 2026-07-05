@@ -556,30 +556,19 @@ footer {
 
 
 
-/* Styling for the winner tagline */
+/* Winner tagline badge */
 .winner-tagline {
-    background-color: var(--color-accent); /* Navy Blue */
-    color: var(--color-white);
+    background-color: #001f3f;
+    color: #ffffff;
     padding: 0.5rem 1rem;
-    display: inline-block; /* To make the background fit the text */
-    margin-bottom: 1rem;
-    font-family: var(--font-special);
-    font-size: 1.1rem; /* Slightly smaller than original tagline */
-    letter-spacing: 1px;
-}
-
-
-
-/* Style for the winner tagline */
-.winner-tagline {
-    background-color: #001f3f; /* Navy Blue */
-    color: #ffffff; /* White */
-    padding: 10px 15px;
-    display: inline-block; /* Makes the background only cover the text */
+    display: inline-block;
     margin-top: 10px;
     margin-bottom: 15px;
+    font-family: var(--font-special);
+    font-size: 1.1rem;
     font-weight: bold;
-    border-radius: 4px; /* Optional: adds slightly rounded corners */
+    letter-spacing: 1px;
+    border-radius: 4px;
 }
 
 .header-logo {
@@ -598,12 +587,6 @@ footer {
     max-width: 90%;
     height: auto;
 }
-.author-image {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-
 .author-image {
     text-align: center;
     margin: 2rem auto;
@@ -633,9 +616,6 @@ footer {
     position: relative;
     z-index: 2;
 }
-git add styles.css
-git commit -m "Lighten dark overlay in page header"
-git push origin main
 
 .books-grid {
     display: grid;
