@@ -664,7 +664,7 @@ footer {
 }
 
 .author-image {
-    flex: 0 0 500px;
+    flex: 0 0 750px;
     position: relative;
     overflow: hidden;
 }
@@ -700,8 +700,16 @@ footer {
     .author-image {
         flex: 0 0 auto;
         width: 100%;
-        max-width: 500px;
+        max-width: 100%;
         margin: 0 auto;
+    }
+    /* Fade effect on mobile: fade bottom and sides */
+    .author-image::after {
+        background:
+            linear-gradient(to right, transparent 70%, rgba(10,10,10,0.7) 100%),
+            linear-gradient(to bottom, transparent 55%, #0a0a0a 90%),
+            linear-gradient(to left, transparent 70%, rgba(10,10,10,0.7) 100%),
+            linear-gradient(to top, transparent 85%, #0a0a0a 100%);
     }
 }
 .influences-list ul {
