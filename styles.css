@@ -657,14 +657,20 @@ footer {
 
 
 
-.author-image img {
-    width: 350px;
-    max-width: 90%;
-    height: auto;
-}
 .author-image {
     text-align: center;
     margin: 2rem auto;
+    position: relative;
+    display: inline-block;
+}
+
+.author-image img {
+    width: 600px;
+    max-width: 95vw;
+    height: auto;
+    display: block;
+    -webkit-mask-image: radial-gradient(ellipse 80% 85% at 50% 40%, black 40%, transparent 80%);
+    mask-image: radial-gradient(ellipse 80% 85% at 50% 40%, black 40%, transparent 80%);
 }
 .influences-list ul {
     list-style-type: none;
