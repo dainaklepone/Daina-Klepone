@@ -138,7 +138,8 @@ p {
 
 .btn-primary:hover {
     background-color: transparent;
-    color: var(--color-accent);
+    color: var(--color-white);
+    border-color: var(--color-white);
 }
 
 .btn-secondary {
@@ -171,7 +172,8 @@ p {
 
 .cta-button:hover {
     background-color: transparent;
-    color: var(--color-accent);
+    color: var(--color-white);
+    border-color: var(--color-white);
 }
 
 /* Header & Navigation */
@@ -328,8 +330,10 @@ section[id] {
 .book-tagline {
     font-family: var(--font-special);
     font-size: 1.2rem;
-    color: var(--color-accent);
+    color: var(--color-white);
     margin-bottom: 1rem;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 0.6rem;
 }
 
 .book-actions {
