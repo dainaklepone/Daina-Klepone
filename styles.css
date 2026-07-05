@@ -287,6 +287,7 @@ header {
 .latest-release {
     padding: 5rem 0;
     background-color: var(--color-dark-gray);
+    scroll-margin-top: 90px;
 }
 
 .book-showcase {
