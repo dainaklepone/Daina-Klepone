@@ -494,7 +494,7 @@ footer {
 
 @media (max-width: 768px) {
     header {
-        padding: 1rem;
+        padding: 0.75rem 1rem;
     }
     
     .menu-toggle {
@@ -543,11 +543,11 @@ footer {
 
 @media (max-width: 576px) {
     h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
     
     h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     
     .hero {
@@ -559,47 +559,65 @@ footer {
     }
 
     .container {
-        width: 92%;
-        padding: 1.5rem 0;
+        width: 100%;
+        padding: 1.5rem 1rem;
+        box-sizing: border-box;
+    }
+
+    .latest-release {
+        padding: 2rem 0;
+        overflow: hidden;
     }
 
     .book-showcase {
         flex-direction: column;
         text-align: center;
         gap: 1.5rem;
+        width: 100%;
+        overflow: hidden;
     }
 
     .book-cover {
         flex: 0 0 auto;
         width: 100%;
-        max-width: 280px;
+        max-width: 260px;
         margin: 0 auto;
     }
 
     .book-cover img {
         width: 100%;
         height: auto;
+        display: block;
+    }
+
+    .book-details {
+        width: 100%;
+        padding: 0;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
     }
 
     .book-actions {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch;
         justify-content: center;
+        width: 100%;
     }
 
     .book-actions .btn {
         width: 100%;
-        max-width: 280px;
         text-align: center;
         box-sizing: border-box;
+        display: block;
     }
 
     .book-description {
         text-align: left;
+        overflow-wrap: break-word;
     }
 
-    .latest-release {
-        padding: 2rem 0;
+    .header-logo {
+        width: 80px;
     }
 }
 
