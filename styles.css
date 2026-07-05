@@ -37,15 +37,16 @@ html {
 
 body {
     font-family: var(--font-body);
+    font-size: 1.05rem;
     background-color: var(--color-black);
     color: var(--color-light-gray);
-    line-height: 1.6;
+    line-height: 1.8;
     overflow-x: hidden;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
+    width: 88%;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 2rem 0;
 }
@@ -97,6 +98,8 @@ h3 {
 }
 
 p {
+    font-size: 1.05rem;
+    line-height: 1.8;
     margin-bottom: 1.5rem;
 }
 
@@ -293,7 +296,7 @@ header {
 }
 
 .book-cover {
-    flex: 0 0 300px;
+    flex: 0 0 360px;
     position: relative;
 }
 
@@ -314,6 +317,7 @@ header {
 
 .book-details {
     flex: 1;
+    font-size: 1.05rem;
 }
 
 .book-tagline {
