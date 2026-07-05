@@ -325,6 +325,7 @@ header {
 
 .book-actions {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
     margin-top: 2rem;
 }
@@ -551,6 +552,50 @@ footer {
     
     .books-grid {
         grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 92%;
+        padding: 1.5rem 0;
+    }
+
+    .book-showcase {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .book-cover {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .book-cover img {
+        width: 100%;
+        height: auto;
+    }
+
+    .book-actions {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .book-actions .btn {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .book-description {
+        text-align: left;
+    }
+
+    .latest-release {
+        padding: 2rem 0;
     }
 }
 
