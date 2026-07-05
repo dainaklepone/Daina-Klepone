@@ -657,20 +657,52 @@ footer {
 
 
 
+.author-profile {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
 .author-image {
-    text-align: center;
-    margin: 2rem auto;
+    flex: 0 0 500px;
     position: relative;
-    display: inline-block;
+    overflow: hidden;
 }
 
 .author-image img {
-    width: 600px;
-    max-width: 95vw;
+    width: 100%;
     height: auto;
     display: block;
-    -webkit-mask-image: radial-gradient(ellipse 80% 85% at 50% 40%, black 40%, transparent 80%);
-    mask-image: radial-gradient(ellipse 80% 85% at 50% 40%, black 40%, transparent 80%);
+}
+
+/* Fade edges into background */
+.author-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to right, transparent 60%, #0a0a0a 100%),
+        linear-gradient(to bottom, transparent 60%, #0a0a0a 100%),
+        linear-gradient(to left, transparent 85%, #0a0a0a 100%),
+        linear-gradient(to top, transparent 85%, #0a0a0a 100%);
+    pointer-events: none;
+}
+
+.author-bio {
+    flex: 1;
+    padding-top: 2rem;
+}
+
+@media (max-width: 900px) {
+    .author-profile {
+        flex-direction: column;
+    }
+    .author-image {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
 }
 .influences-list ul {
     list-style-type: none;
