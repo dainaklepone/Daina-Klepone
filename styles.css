@@ -186,7 +186,7 @@ header {
     align-items: center;
     z-index: 1000;
     transition: all 0.3s ease;
-    background-color: rgba(10, 10, 10, 0.9);
+    background-color: rgba(10, 10, 10, 0.7);
 }
 
 .logo a {
