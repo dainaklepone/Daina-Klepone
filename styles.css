@@ -37,10 +37,10 @@ html {
 
 body {
     font-family: var(--font-body);
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     background-color: var(--color-black);
     color: var(--color-light-gray);
-    line-height: 1.8;
+    line-height: 1.9;
     overflow-x: hidden;
 }
 
@@ -98,8 +98,8 @@ h3 {
 }
 
 p {
-    font-size: 1.05rem;
-    line-height: 1.8;
+    font-size: 1.15rem;
+    line-height: 1.9;
     margin-bottom: 1.5rem;
 }
 
@@ -317,7 +317,7 @@ header {
 
 .book-details {
     flex: 1;
-    font-size: 1.05rem;
+    font-size: 1.15rem;
 }
 
 .book-tagline {
