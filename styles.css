@@ -89,7 +89,7 @@ h2:after {
     bottom: -10px;
     left: 0;
     width: 60px;
-    height: 3px;
+    height: 6px;
     background-color: var(--color-accent);
 }
 
@@ -641,7 +641,7 @@ footer {
 
 /* Winner tagline badge */
 .winner-tagline {
-    background-color: #001f3f;
+    background-color: var(--color-accent);
     color: #ffffff;
     padding: 0.5rem 1rem;
     display: inline-block;
