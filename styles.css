@@ -512,6 +512,12 @@ footer {
     header {
         padding: 0.75rem 1rem;
     }
+    .header-logo {
+        width: 60px;
+    }
+    .page-header {
+        padding: 90px 0 1.5rem;
+    }
     
     .menu-toggle {
         display: flex;
@@ -636,7 +642,7 @@ footer {
         width: 55px;
     }
     .page-header {
-        padding-top: 100px;
+        padding: 90px 0 1.5rem;
     }
 }
 
