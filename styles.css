@@ -633,7 +633,10 @@ footer {
     }
 
     .header-logo {
-        width: 80px;
+        width: 55px;
+    }
+    .page-header {
+        padding-top: 100px;
     }
 }
 
@@ -731,7 +734,8 @@ footer {
 .page-header {
     position: relative;
     z-index: 1;
-    background: none; /* If it had a background image */
+    background: none;
+    padding: 140px 0 3rem;
 }
 
 .page-header::before {
