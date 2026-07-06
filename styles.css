@@ -177,6 +177,12 @@ p {
 }
 
 /* Header & Navigation */
+.header-logo {
+    max-width: 100%;
+    width: 120px;
+    height: auto;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -663,11 +669,7 @@ footer {
     border-radius: 4px;
 }
 
-.header-logo {
-    max-width: 100%;
-    width: 120px;
-    height: auto;
-}
+
 
 
 
