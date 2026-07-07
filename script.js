@@ -42,6 +42,29 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(type, startDelay);
     }
 
+    // Typewriter animation for page taglines (Writing, About, Blog, Contact)
+    const pageTypewriters = document.querySelectorAll('.page-typewriter');
+    pageTypewriters.forEach(function(el) {
+        const text = el.getAttribute('data-text');
+        const cursor = el.nextElementSibling;
+        let i = 0;
+        const speed = 70;
+        const startDelay = 500;
+
+        function typePageText() {
+            if (i < text.length) {
+                el.textContent += text.charAt(i);
+                i++;
+                setTimeout(typePageText, speed);
+            } else {
+                if (cursor) {
+                    cursor.style.animation = 'blink 1s step-end infinite';
+                }
+            }
+        }
+        setTimeout(typePageText, startDelay);
+    });
+
     // Navigation menu toggle for mobile
     const menuToggle = document.querySelector('.menu-toggle');
     const navLinks = document.querySelector('.nav-links');
