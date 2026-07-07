@@ -817,6 +817,11 @@ footer {
     margin-bottom: 3rem;
 }
 
+.they-said h2:after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .testimonials {
     display: flex;
     flex-direction: column;
