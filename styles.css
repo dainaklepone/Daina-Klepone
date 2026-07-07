@@ -481,7 +481,7 @@ footer {
 .copyright {
     text-align: center;
     font-size: 0.8rem;
-    color: var(--color-medium-gray);
+    color: rgba(255, 255, 255, 0.7);
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
