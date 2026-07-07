@@ -812,14 +812,18 @@ footer {
     background-color: var(--color-dark-gray);
 }
 
-.they-said h2 {
+.they-said .container {
     text-align: center;
+}
+
+.they-said h2 {
+    display: inline-block;
+    text-align: left;
     margin-bottom: 3rem;
 }
 
 .they-said h2:after {
     left: 0;
-    transform: none;
 }
 
 .testimonials {
