@@ -818,8 +818,8 @@ footer {
 }
 
 .they-said h2:after {
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    transform: none;
 }
 
 .testimonials {
