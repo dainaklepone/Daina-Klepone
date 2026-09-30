@@ -105,21 +105,54 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Newsletter form submission
-    const newsletterForm = document.querySelector('.newsletter-form');
+    // Newsletter form submission (Formspree)
+    const NEWSLETTER_ENDPOINT = 'https://formspree.io/f/mqaqnbbo';
+    const isLithuanian = document.documentElement.lang === 'lt';
+    const newsletterMessages = isLithuanian ? {
+        success: 'Ačiū, kad užsiprenumeravote! Iki greito susitikimo!',
+        error: 'Atsiprašome, įvyko klaida. Bandykite dar kartą.'
+    } : {
+        success: 'Thank you for subscribing! We\'ll meet soon!',
+        error: 'Sorry, something went wrong. Please try again.'
+    };
 
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
+    document.querySelectorAll('.newsletter-form').forEach(function(form) {
+        form.addEventListener('submit', async function(e) {
             e.preventDefault();
-            const email = this.querySelector('input[type="email"]').value;
+            const emailInput = form.querySelector('input[type="email"]');
+            const button = form.querySelector('button[type="submit"]');
+            if (!emailInput || !emailInput.value) return;
 
-            if (email) {
-                // This would normally send the data to a server
-                // For now, we'll just show a success message
-                this.innerHTML = '<p class="success-message">Thank you for subscribing! Check your email for your free noir short story.</p>';
+            const data = new FormData(form);
+            data.set('email', emailInput.value);
+            if (!data.has('_subject')) {
+                data.set('_subject', 'New Newsletter Subscription');
+            }
+
+            if (button) button.disabled = true;
+            try {
+                const response = await fetch(NEWSLETTER_ENDPOINT, {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+                if (!response.ok) throw new Error('Request failed');
+                const message = document.createElement('p');
+                message.className = 'success-message';
+                message.textContent = newsletterMessages.success;
+                form.replaceWith(message);
+            } catch (err) {
+                if (button) button.disabled = false;
+                alert(newsletterMessages.error);
             }
         });
-    }
+    });
+
+    // Footer copyright year
+    const currentYear = new Date().getFullYear();
+    document.querySelectorAll('.copyright-year').forEach(function(el) {
+        el.textContent = currentYear;
+    });
 
     // Add film grain effect to the page
     addFilmGrainEffect();

@@ -252,16 +252,15 @@ header {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: 75vh;
+    min-height: 480px;
+    padding-top: 110px; /* keep the name clear of the fixed header */
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-image: url('images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background: radial-gradient(ellipse at center, #2a2a2a 0%, #151515 55%, #0a0a0a 100%);
     color: var(--color-white);
 }
 
@@ -603,7 +602,7 @@ footer {
     }
     
     .hero {
-        height: 80vh;
+        height: 75vh;
     }
     
     .books-grid {
