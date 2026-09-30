@@ -333,10 +333,10 @@ section[id] {
 }
 
 .book-publisher {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
     letter-spacing: 1px;
-    color: var(--color-light-gray);
-    opacity: 0.8;
+    color: var(--color-white);
     margin-bottom: 1rem;
 }
 
