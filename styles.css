@@ -332,6 +332,20 @@ section[id] {
     font-size: 1.38rem;
 }
 
+.book-publisher {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: var(--color-light-gray);
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.page-header .book-publisher {
+    position: relative;
+    z-index: 2;
+    margin-top: -1.5rem;
+}
+
 .book-tagline {
     font-family: var(--font-special);
     font-size: 1.2rem;
