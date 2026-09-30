@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cursorEl = document.querySelector('.typewriter-cursor');
     if (typewriterEl) {
         const isLT = document.documentElement.lang === 'lt';
-        const text = isLT ? 'Visa, ką įsivaizduoji, yra tikra' : 'Everything you imagine is real';
+        const text = isLT ? 'Tikra yra tai, ką gali įsivaizduoti' : 'Everything you imagine is real';
         let i = 0;
         const speed = 70; // ms per character
         const startDelay = 800; // wait before starting
